@@ -17,3 +17,5 @@ Pillow
 
 lxml
 lxml_html_clean
+
+google-genai
