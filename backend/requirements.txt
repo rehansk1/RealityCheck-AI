@@ -10,7 +10,6 @@ requests
 newspaper3k
 
 python-dotenv
-
 pydantic
 
 Pillow
@@ -20,3 +19,4 @@ lxml_html_clean
 
 google-genai
 pypdf
+python-docx
