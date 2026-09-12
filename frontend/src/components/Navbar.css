@@ -1,0 +1,563 @@
+/* =========================================================
+   REALITYCHECK AI
+   PREMIUM NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  z-index: 9999;
+
+  background: rgba(5, 8, 22, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transition:
+    height 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.navbar-scrolled {
+  height: 70px;
+
+  background: rgba(5, 8, 22, 0.94);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(129, 140, 248, 0.08);
+}
+
+/* =========================================================
+   NAVBAR TOP GLOW
+   ========================================================= */
+
+.navbar::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 420px;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(129, 140, 248, 0.8),
+    transparent
+  );
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.navbar-container {
+  width: min(1180px, calc(100% - 40px));
+  height: 100%;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 25px rgba(99, 102, 241, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-logo:hover .logo-mark {
+  transform: rotate(-7deg) scale(1.08);
+
+  box-shadow:
+    0 12px 35px rgba(99, 102, 241, 0.5);
+}
+
+.logo-text {
+  color: #f8fafc;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  margin-left: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #818cf8,
+    #a78bfa
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+/* =========================================================
+   NAVIGATION AREA
+   ========================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+
+  padding: 4px;
+
+  border: 1px solid rgba(148, 163, 184, 0.09);
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* =========================================================
+   NAV LINKS
+   ========================================================= */
+
+.nav-link {
+  position: relative;
+
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 16px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #7f899e;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* HOVER */
+
+.nav-link:hover {
+  color: #f8fafc;
+
+  background: rgba(129, 140, 248, 0.08);
+
+  transform: translateY(-1px);
+}
+
+/* TEXT GLOW */
+
+.nav-link:hover span {
+  text-shadow:
+    0 0 18px rgba(165, 180, 252, 0.4);
+}
+
+/* UNDERLINE */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 3px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #6366f1,
+    #a78bfa
+  );
+
+  box-shadow:
+    0 0 10px rgba(129, 140, 248, 0.8);
+
+  transition:
+    width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 24px;
+}
+
+/* =========================================================
+   ACTION AREA
+   ========================================================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-left: 18px;
+
+  border-left: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+.login-button {
+  position: relative;
+
+  height: 40px;
+
+  padding: 0 17px;
+
+  border: 1px solid transparent;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #aeb7c8;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.login-button:hover {
+  color: #ffffff;
+
+  border-color: rgba(129, 140, 248, 0.2);
+
+  background: rgba(129, 140, 248, 0.07);
+
+  transform: translateY(-1px);
+}
+
+/* LOGIN GLOW DOT */
+
+.login-button::before {
+  content: "";
+
+  position: absolute;
+
+  left: 8px;
+  top: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #818cf8;
+
+  opacity: 0;
+
+  transform: translateY(-50%) scale(0);
+
+  box-shadow:
+    0 0 10px #818cf8;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.login-button:hover::before {
+  opacity: 1;
+
+  transform:
+    translateY(-50%)
+    scale(1);
+}
+
+/* =========================================================
+   GET STARTED
+   ========================================================= */
+
+.get-started-button {
+  position: relative;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(129, 140, 248, 0.3);
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #7c3aed
+  );
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(99, 102, 241, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.get-started-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 35px rgba(99, 102, 241, 0.4);
+}
+
+/* SHINE */
+
+.get-started-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition:
+    left 0.6s ease;
+}
+
+.get-started-button:hover::before {
+  left: 140%;
+}
+
+/* ARROW */
+
+.get-started-button .arrow {
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.get-started-button:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    width: calc(100% - 24px);
+
+    gap: 15px;
+  }
+
+  .navbar-links {
+    padding: 3px;
+  }
+
+  .nav-link {
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+
+  .navbar-actions {
+    padding-left: 10px;
+  }
+
+  .login-button {
+    padding: 0 12px;
+  }
+
+  .get-started-button {
+    padding: 0 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    width: calc(100% - 18px);
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+  .login-button {
+    height: 38px;
+
+    padding: 0 12px;
+  }
+
+  .get-started-button {
+    height: 38px;
+
+    padding: 0 12px;
+  }
+
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .logo-mark {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .logo-text {
+    font-size: 14px;
+  }
+
+  .logo-mark {
+    width: 33px;
+    height: 33px;
+  }
+
+  .login-button {
+    padding: 0 9px;
+  }
+
+  .get-started-button {
+    padding: 0 9px;
+  }
+}

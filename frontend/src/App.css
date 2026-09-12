@@ -1,0 +1,273 @@
+/* =========================================================
+   REALITYCHECK AI
+   APP.CSS — COMPLETE REPLACEMENT
+   ========================================================= */
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   MAIN WEBSITE
+   ========================================================= */
+
+.main-site {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   AUTH PAGE WRAPPER
+   ========================================================= */
+
+.auth-page-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  display: block;
+
+  background: #050816;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* =========================================================
+   AUTH PAGE RESET
+   ========================================================= */
+
+.auth-page-wrapper *,
+.auth-page-wrapper *::before,
+.auth-page-wrapper *::after {
+  box-sizing: border-box;
+}
+
+/* Remove unwanted default spacing */
+
+.auth-page-wrapper h1,
+.auth-page-wrapper h2,
+.auth-page-wrapper h3,
+.auth-page-wrapper h4,
+.auth-page-wrapper h5,
+.auth-page-wrapper h6,
+.auth-page-wrapper p,
+.auth-page-wrapper ul,
+.auth-page-wrapper ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Buttons */
+
+.auth-page-wrapper button {
+  font-family: inherit;
+}
+
+/* Inputs */
+
+.auth-page-wrapper input,
+.auth-page-wrapper textarea,
+.auth-page-wrapper select {
+  font-family: inherit;
+}
+
+/* =========================================================
+   AUTH BACKGROUND EFFECT
+   ========================================================= */
+
+.auth-page-wrapper::before {
+  content: "";
+
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  top: -200px;
+  left: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 102, 241, 0.08);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.auth-page-wrapper::after {
+  content: "";
+
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  right: -200px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.08);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================================================
+   AUTH CONTENT
+   ========================================================= */
+
+.auth-page-wrapper > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+/* =========================================================
+   IMPORTANT GLOBAL RESET
+   ========================================================= */
+
+.auth-page-wrapper main,
+.auth-page-wrapper section,
+.auth-page-wrapper article,
+.auth-page-wrapper header,
+.auth-page-wrapper footer {
+  width: auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   DO NOT LET OLD MAIN SITE STYLES AFFECT AUTH PAGES
+   ========================================================= */
+
+.auth-page-wrapper .container {
+  width: auto;
+  max-width: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   AUTH LINKS
+   ========================================================= */
+
+.auth-page-wrapper a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   AUTH BUTTON RESET
+   ========================================================= */
+
+.auth-page-wrapper button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  outline: none;
+}
+
+/* =========================================================
+   AUTH INPUT RESET
+   ========================================================= */
+
+.auth-page-wrapper input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.auth-page-wrapper::-webkit-scrollbar {
+  width: 7px;
+}
+
+.auth-page-wrapper::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+.auth-page-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(129, 140, 248, 0.25);
+
+  border-radius: 20px;
+}
+
+.auth-page-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(129, 140, 248, 0.45);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .auth-page-wrapper {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+  }
+
+  .auth-page-wrapper::before {
+    width: 350px;
+    height: 350px;
+
+    top: -140px;
+    left: -160px;
+  }
+
+  .auth-page-wrapper::after {
+    width: 350px;
+    height: 350px;
+
+    right: -160px;
+    bottom: -140px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .auth-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
